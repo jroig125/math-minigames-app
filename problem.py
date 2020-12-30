@@ -26,11 +26,11 @@ class Problem():
 
 
 def generate_digit(difficulty):
-    if difficulty == "easy":
+    if difficulty == "e":
         return random.randint(-5, 9)
-    if difficulty == "medium":
+    if difficulty == "m":
         return random.randint(-9, 25)
-    if difficulty == "hard":
+    if difficulty == "h":
         return random.randint(-20, 50)
     else:
         raise DifficultyNotDefinedError("Difficulty not yet defined.")
@@ -82,7 +82,7 @@ class DifficultyNotDefinedError(BaseException):
 
 
 def main():
-    difficulties = ['easy', 'medium', 'hard']
+    difficulties = ['e', 'm', 'h']
     for difficulty in difficulties:
         print(Problem(difficulty, 'Adding and Subtracting Integers'))
 
